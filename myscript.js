@@ -1,8 +1,24 @@
-const count_char = document.getElementById("count_char");
+const count_character = document.getElementById("count_character");
 const count_char_textarea = document.getElementById("count_char_textarea");
-const sum_out = document.getElementById("sum_out");
+const showCharacters = document.getElementById("showCharacters");
 
-function countChar() {
-  count_char.value = count_char_textarea.value.length;
-  sum_out.innerHTML = count_char.value;
+function count_char() {
+  count_character.value = count_char_textarea.value.length;
+  showCharacters.innerHTML = count_character.value;
 }
+
+function count_word(val) {
+  let wom = val.match(/\S+/g);
+  return {
+    words: wom ? wom.length : 0
+  };
+}
+
+let textContent = document.getElementById("count_char_textarea");
+let showWordCount = document.getElementById("box");
+textContent.addEventListener("input", function () {
+  let v = count_word(this.value);
+  showWordCount.innerHTML = (
+      "<br>Words: " + v.words
+  );
+}, false);
