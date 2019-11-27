@@ -1,8 +1,23 @@
-const count_char = document.getElementById("count_char");
-const count_char_textarea = document.getElementById("count_char_textarea");
-const sum_out = document.getElementById("sum_out");
+const countCharacter = document.getElementById('countCharacter');
+const countCharTextarea = document.getElementById('countCharTextarea');
+const showCharacters = document.getElementById('showCharacters');
 
 function countChar() {
-  count_char.value = count_char_textarea.value.length;
-  sum_out.innerHTML = count_char.value;
+  countCharacter.value = countCharTextarea.value.replace(/ *n*r*t*/g, "").length;
+  showCharacters.innerHTML = countCharacter.value;
 }
+
+function countWord(val) {
+  let wom = val.match(/\S+/g);
+  return {
+    words: wom ? wom.length : 0
+  };
+}
+
+let showWordCount = document.getElementById('box');
+countCharTextarea.addEventListener('input', function () {
+  let v = countWord(this.value);
+  showWordCount.innerHTML = (
+      "<br>Words:" + v.words
+  );
+}, false);
