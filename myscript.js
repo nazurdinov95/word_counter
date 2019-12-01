@@ -1,11 +1,11 @@
-const countCharacter = document.getElementById('countCharacter');
 const countCharTextarea = document.getElementById('countCharTextarea');
-const showCharacters = document.getElementById('showCharacters');
+const countCharacters = document.getElementById('countCharacters');
+//const characters = document.getElementById('characters');
 
-function countChar() {
-  countCharacter.value = countCharTextarea.value.replace(/ *n*r*t*/g, "").length;
-  showCharacters.innerHTML = countCharacter.value;
-}
+countCharTextarea.addEventListener("keyup",function() {
+  const characters = countCharTextarea.value.split(' ');
+  countCharacters.innerHTML = characters.length;
+});
 
 function countWord(val) {
   let wom = val.match(/\S+/g);
