@@ -1,5 +1,31 @@
+.container {
+    margin: 2% auto;
+    padding: 15px;
+    background-color: #FFFFFF;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 1% 0 3%;
+}
+
+.containerTextArea{
+    text-align: center
+}
+
 #countCharTextarea{
-    width: 500px;
-    height: 300px;
-    overflow-wrap: break-word;
+    width: 80%;
+    height: 250px;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+}
+
+textarea:hover {
+    border-color: #C0C0C0;
+}
+
+textarea:focus {
+    border-color: #4D90FE;
 }

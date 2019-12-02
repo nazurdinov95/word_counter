@@ -6,10 +6,24 @@
     <link href="stayle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="countCharBlock">
-    <textarea id="countCharTextarea"></textarea><br/>
-    <span id="countCharacters">0</span>
-    <div id="box"></div>
+<div class="container">
+    <h1>Word Counter</h1>
+    <div class="containerTextArea">
+    <textarea id="countCharTextarea" placeholder="Enter your text here..."></textarea><br/>
+    </div>
+    <div id="countChar">Characters:
+        <span id="countCharacters">0</span><br>
+    </div>
+    <div id="counterWord">Words:
+        <span id="showWordCount">0</span>
+    </div>
+    <div id="counterSentences">Sentences:
+        <span id="sentenceCount">0</span>
+    </div>
+    <div>Paragraphs:
+        <span id="paragraphCount">0</span>
+    </div>
+
 </div>
 <script src="myscript.js" type="text/javascript"></script>
 </body>
